@@ -8,7 +8,7 @@
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
           <li class="nav-item text-nowrap">
-            <router-link class="nav-link" to="/add">+ Add New Row</router-link>
+            <!-- <router-link class="nav-link" to="/add">+ Add New Row</router-link> -->
           </li>
         </ul>
       </nav>
@@ -16,6 +16,13 @@
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {};
+  },
+};
+</script>
 
 <style>
 .container {

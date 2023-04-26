@@ -8,10 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "ant-design-vue": "^1.7.4",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "google-spreadsheet": "^3.0.11",
     "i": "^0.3.6",
+    "moment": "^2.29.4",
     "sheetsu-node": "0.0.7",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",

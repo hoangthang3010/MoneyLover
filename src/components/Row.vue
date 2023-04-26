@@ -2,8 +2,8 @@
   <tr>
     <td>{{ row.active }}</td>
     <td>{{ row.content }}</td>
-    <td>{{ row.date }}</td>
-    <td>{{ row.price }}</td>
+    <td>{{ row.date | formatDate }}</td>
+    <td>{{ row.price | price }}</td>
   </tr>
 </template>
 
