@@ -31,8 +31,9 @@
           <span v-else></span>
           <a-range-picker v-model="selectDate" />
         </div>
-        <div>
+        <div style="overflow-x: auto">
           <a-table
+            style="min-width: 1200px"
             :columns="columns"
             :data-source="costOfLivingtList"
             bordered
