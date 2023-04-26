@@ -6,14 +6,15 @@
           class="d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap align-items-center pb-2 mb-2"
         >
           <h2 class="mb-0">Cost of living</h2>
-          <h2 class="mb-0">Total all: {{ totalAll | price }}</h2>
+          <h4 class="mb-0">Total all: {{ totalAll | price }}</h4>
           <div class="btn-toolbar mb-2 mb-md-0">
             <a
               href="https://docs.google.com/spreadsheets/d/1PETTwrEd_wt_12w_9MizACZ9dwW0oXr2J3EHmxlA3SM/edit?usp=sharing"
-              class="btn btn-sm btn-outline-secondary"
               target="_blank"
             >
-              View Google Sheet
+              <a-button>
+                View Google Sheet
+              </a-button>
             </a>
           </div>
         </div>

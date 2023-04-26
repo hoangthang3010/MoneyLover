@@ -21,7 +21,7 @@
           <div class="order-md-1 mb-3">
             <a-form @submit.prevent.native="addRow">
               <div class="row justify-content-between align-items-end">
-                <div>
+                <div class="col-sm-3">
                   <label for="active">Active</label>
                   <a-select default-value="Du lịch" v-model="active">
                     <div slot="dropdownRender" slot-scope="menu">
@@ -53,7 +53,7 @@
                     </a-select-option>
                   </a-select>
                 </div>
-                <div>
+                <div class="col-sm-3">
                   <label for="content">Contents</label>
                   <a-input
                     type="text"
@@ -63,7 +63,7 @@
                     required
                   />
                 </div>
-                <div>
+                <div class="col-sm-3">
                   <label for="date">Date</label>
                   <a-date-picker
                     class="w-100"
@@ -71,7 +71,7 @@
                     format="DD/MM/YYYY"
                   />
                 </div>
-                <div>
+                <div class="col-sm-3">
                   <label for="price">Price</label>
                   <a-input-number
                     type="number"
@@ -82,19 +82,19 @@
                     required
                   />
                 </div>
-                <div>
-                  <a-button type="primary" html-type="submit" class="mx-2">
-                    Submit
-                  </a-button>
-                  <a-button class="me-2" @click="onCancelAdd">Cancel</a-button>
-                  <!-- <a
+              </div>
+              <div class="mt-1 d-flex justify-content-end">
+                <a-button type="primary" html-type="submit" class="mr-2">
+                  Submit
+                </a-button>
+                <a-button @click="onCancelAdd">Cancel</a-button>
+                <!-- <a
                     href="https://docs.google.com/spreadsheets/d/1PETTwrEd_wt_12w_9MizACZ9dwW0oXr2J3EHmxlA3SM/edit?usp=sharing"
                     class="btn btn-sm btn-outline-secondary"
                     target="_blank"
                   >
                     View Google Sheet
                   </a> -->
-                </div>
               </div>
             </a-form>
           </div>

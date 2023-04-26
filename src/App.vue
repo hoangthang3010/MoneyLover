@@ -50,4 +50,14 @@ export default {
 .ant-popover-inner-content {
   padding: 10px !important;
 }
+.ant-table-wrapper .ant-pagination.ant-table-pagination {
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+@media only screen and (max-width: 576px) {
+  .mt-ms-1 {
+    margin-top: 1rem;
+  }
+}
 </style>
