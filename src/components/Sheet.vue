@@ -34,7 +34,7 @@
         </div>
         <div style="overflow-x: auto">
           <a-table
-            style="min-width: 1200px"
+            style="min-width: 700px"
             :columns="columns"
             :data-source="costOfLivingtList"
             bordered
