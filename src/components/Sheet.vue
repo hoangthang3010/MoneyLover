@@ -138,23 +138,49 @@ const columns = [
     dataIndex: "active",
     width: "15%",
     scopedSlots: { customRender: "active" },
+    sorter: (a, b) => {
+      const nameA = a.active.toUpperCase();
+      const nameB = b.active.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    },
   },
   {
     title: "Content",
     dataIndex: "content",
     width: "40%",
     scopedSlots: { customRender: "content" },
+    sorter: (a, b) => {
+      const nameA = a.content.toUpperCase();
+      const nameB = b.content.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    },
   },
   {
     title: "Price",
     dataIndex: "price",
     width: "20%",
     scopedSlots: { customRender: "price" },
+    sorter: (a, b) => a.price - b.price,
   },
   {
     title: "Date",
     dataIndex: "date",
     scopedSlots: { customRender: "date" },
+    sorter: (a, b) =>
+      new Date(moment(a.date, "DD/MM/YYYY")) -
+      new Date(moment(b.date, "DD/MM/YYYY")),
   },
   {
     title: "Operation",
