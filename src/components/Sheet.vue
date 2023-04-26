@@ -82,7 +82,7 @@
             <template slot="operation" slot-scope="text, record, index">
               <div class="editable-row-operations">
                 <span v-if="editingKey === index">
-                  <a @click="() => save(index)">Save</a>
+                  <a class="mr-2" @click="() => save(index)">Save</a>
                   <a-popconfirm
                     title="Sure to cancel?"
                     @confirm="() => cancel(index)"
@@ -91,7 +91,10 @@
                   </a-popconfirm>
                 </span>
                 <span v-else>
-                  <a :disabled="editingKey !== ''" @click="() => edit(index)"
+                  <a
+                    class="mr-2"
+                    :disabled="editingKey !== ''"
+                    @click="() => edit(index)"
                     >Edit</a
                   >
                   <a-popconfirm
@@ -325,12 +328,12 @@ export default {
     },
     cancel(key) {
       const newData = [...this.rows];
-      const target = newData.find((item) => key === item.key);
+      const target = newData.find((item, i) => key === i);
       this.editingKey = "";
       if (target) {
         Object.assign(
           target,
-          this.cacheData.find((item) => key === item.key)
+          this.cacheData.find((item, i) => key === i)
         );
         delete target.editable;
         this.rows = newData;
@@ -361,4 +364,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+a[disabled] {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+</style>

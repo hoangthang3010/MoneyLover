@@ -41,7 +41,7 @@
                           v-model="addItemValue"
                           @focus="(e) => e.preventDefault()"
                         />
-                        <a-button @click="onAddItem">sdfsdf</a-button>
+                        <a-button @click="onAddItem">Add</a-button>
                       </div>
                     </div>
                     <a-select-option
@@ -168,7 +168,6 @@ export default {
 
       let opt = [];
       rows.map((item) => {
-        console.log(item.activeList);
         item.activeList && opt.push(item.activeList);
       });
       this.options = opt;

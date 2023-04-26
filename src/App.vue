@@ -46,4 +46,8 @@ export default {
 .lh-condensed {
   line-height: 1.25;
 }
+
+.ant-popover-inner-content {
+  padding: 10px !important;
+}
 </style>
